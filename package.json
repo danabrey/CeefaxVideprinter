@@ -1,10 +1,23 @@
 {
-  "name": "CeefaxVideprinter",
-  "version": "0.0.1",
+  "name": "ceefaxvideprinter",
+  "version": "0.1.0",
   "description": "A Ceefax-ified version of the BBC live scores videprinter.",
   "main": "index.html",
-  "author": "",
-  "license": "",
+  "contributors": [
+      {
+          "name": "Dan Abrey"
+      },
+      {
+          "name": "Patrick Pawsey-Vale"
+      }
+  ],
+  "homepage": "https://danabrey.github.io/CeefaxVideprinter",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/danabrey/CeefaxVideprinter.git"
+  },
+  "bugs": "https://github.com/danabrey/CeefaxVideprinter/issues",
+  "license": "MIT",
   "devDependencies": {
     "angular": "^1.4.8",
     "angular-ui-router": "^0.2.15",
