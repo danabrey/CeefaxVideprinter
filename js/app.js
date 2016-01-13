@@ -429,7 +429,7 @@ CeefaxVideprinter.filter('cut', function () {
 ;CeefaxVideprinter.controller('VideprinterCtrl', ['$scope', '$http', '$interval', "PageData", function($scope, $http, $interval, PageData) {
     var limit = 15;
     var refresh = function() {
-        var url = "http://polling.bbc.co.uk/sport/shared/football/videprinter.json?callback=JSON_CALLBACK";
+        var url = "//polling.bbc.co.uk/sport/shared/football/videprinter.json?callback=JSON_CALLBACK";
         $http.jsonp(url)
             .success(function(data){
                 var totalEvents = data.data.payload.events.length;
