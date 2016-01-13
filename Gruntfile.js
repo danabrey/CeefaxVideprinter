@@ -56,7 +56,13 @@ module.exports = function(grunt) {
                 files: ['src/**', 'Gruntfile.js'],
                 tasks: ['build'],
             },
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: ['**']
         }
     });
-    grunt.registerTask('build', ['sass', 'concat', 'copy']);
+    grunt.registerTask('build', ['sass', 'concat', 'copy', 'gh-pages']);
 };

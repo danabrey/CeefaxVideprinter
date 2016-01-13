@@ -1,4 +1,4 @@
-# Ceefax302
+# CeefaxVideprinter
 
 ## About this project
 
@@ -8,29 +8,26 @@ The project is an experimental proof of concept and is not affiliated with or en
 
 ## Demo
 
-See http://danabrey.github.io/
+See http://danabrey.github.io/CeefaxVideprinter.
 
-## Prerequisites
+## Local usage/development prerequesites
 
 * npm
 * grunt `npm install -g grunt`
 * grunt-cli `npm install -g grunt-cli`
 
-## Usage
+1. Clone this repository
+2. `cd CeefaxVideprinter && npm install`
 
-1. Clone this repository locally
-2. `cd ceefax302 && npm install`
-
-### To run
+### Usage
 
 1. `grunt build`
 2. `cd dist`
 3. `live-server`
 
-### To develop
+### Development
 
 1. `grunt build`
 2. `grunt watch`
-3. Open another terminal window
 3. `cd dist`
 4. `live-server`
