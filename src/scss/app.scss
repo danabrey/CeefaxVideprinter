@@ -1,0 +1,53 @@
+
+$small-padding: 0.5vw 1vw;
+$row-margin: 2vh;
+
+@import "base";
+@import "utility";
+@import "layout";
+@import "fonts";
+@import "typography";
+
+@import "header";
+
+main {
+    float: left;
+    width: 100%;
+    h2 {
+		color: $green;
+	    text-transform: uppercase;
+	    letter-spacing: 0.25vw;
+	    font-size: 2.75vw;
+    }
+	.headline {
+		color: $yellow;
+		text-transform: uppercase;
+	}
+	p {
+		color: $cyan;
+		&:first-of-type {
+			color: $white;
+		}
+	}
+}
+
+.videprinter {
+	li {
+		list-style-type: none;
+		.team {
+			color: $cyan;
+		}
+		strong {
+			color: $yellow;
+			font-weight: normal;
+		}
+	}
+}
+
+.social-action {
+    display: block;
+    width: 100%;
+    & + .social-action {
+        margin-top: 0.25rem;
+    }
+}

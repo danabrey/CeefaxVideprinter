@@ -1,0 +1,17 @@
+.double-height {
+    display: inline-block;
+    transform: scale(1,2);
+    line-height: 2/3*2; // 2/3 of scale
+}
+
+.triple-height {
+    display: inline-block;
+    transform: scale(1,3);
+    line-height: 3/3*2; // 2/3 of scale
+}
+
+.quadruple-height {
+    display: inline-block;
+    transform: scale(1,4);
+    line-height: 4/3*2; // 2/3 of scale
+}

@@ -1,0 +1,21 @@
+$green: rgb(1,255,2);
+$blue: rgb(0,0,254);
+$yellow: rgb(254,255,0);
+$black: rgb(0,0,0);
+$white: rgb(255,255,255);
+$cyan: rgb(0,255,244);
+
+html, body {
+    background: $black;
+    color: $white;
+    font-family: "teletext";
+    font-size: 2vw;
+}
+
+ul {margin: 0; padding:0; list-style-type: none;}
+
+a {
+    color: $cyan;
+    font-weight: bold;
+    text-decoration: underline;
+}

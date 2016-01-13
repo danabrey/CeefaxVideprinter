@@ -1,0 +1,21 @@
+{
+  "name": "CeefaxVideprinter",
+  "version": "0.0.1",
+  "description": "A Ceefax-ified version of the BBC live scores videprinter.",
+  "main": "index.html",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "angular-ui-router": "^0.2.15",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.1.0",
+    "live-reload": "^1.1.0",
+    "load-grunt-tasks": "^3.3.0",
+    "node-sass": "^3.4.2"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,11 @@
+<h2>Rolling videprinter</h2>
+<p ng-show="videprinterEvents == undefined || videprinterEvents.length <= 0">
+    Live scores will appear here
+</p>
+<ul class="videprinter" ng-show="videprinterEvents.length > 0">
+  <li ng-repeat="item in videprinterEvents">
+      <span ng-bind-html="item.competitionCode | trust"></span>: <span ng-bind-html="item.label | trust"></span> <span class="team" ng-bind-html="item.homeText | trust"></span> <span ng-bind-html="item.scoreText | trust"></span> <span class="team" ng-bind-html="item.awayText | trust"></span>
+      <br><strong><span ng-bind-html="item.comment | trust"></span></strong>
+  </li>
+</ul>
+<div class="standout-row blue"><a ui-sref="302">About this project</a> <a class="right" ui-sref="302">302</a></div>
