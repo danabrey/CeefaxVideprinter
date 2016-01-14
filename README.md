@@ -10,7 +10,7 @@ The project is an experimental proof of concept and is not affiliated with or en
 
 See http://danabrey.github.io/CeefaxVideprinter.
 
-## Local usage/development prerequesites
+## Local usage/development prerequisites
 
 * npm
 * grunt `npm install -g grunt`
