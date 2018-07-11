@@ -432,15 +432,17 @@ CeefaxVideprinter.filter('cut', function () {
         var url = "https://sportinglife.com/api/football/vidiprinter";
         $http.get(url)
             .success(function(data){
-                console.log(data);
                 var totalEvents = data.lines.length;
                 if (totalEvents > 0) {
                     $scope.videprinterEvents = [];
                     angular.forEach(data.lines, function(val) {
-                        if (val.event_type.event_type == 'FULL_TIME') val.label = 'FT';
-                        if (val.label == 'END_OF_FIRST_HALF') val.label = 'HT';
-                        if (val.label == 'OWN_GOAL') val.label = 'OG';
-                        if (val.label == 'RED CARD!') val.label = 'RED';
+                        if (val.event_type.event_type == 'FULL_TIME') val.event_type.event_type = 'FT';
+                        if (val.event_type.event_type == 'END_OF_FIRST_HALF') val.event_type.event_type = 'HT';
+                        if (val.event_type.event_type == 'OWN_GOAL') val.event_type.event_type = 'OG';
+                        if (val.event_type.event_type == 'PENALTY') {
+                            val.event_type.event_type = 'GOAL';
+                            val.comment = "PEN"
+                        }
                         $scope.videprinterEvents.push(val);
                     });
                 }

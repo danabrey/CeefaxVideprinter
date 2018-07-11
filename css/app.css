@@ -153,9 +153,12 @@ main {
       color: white; }
 
 .videprinter li {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 10px; }
   .videprinter li .team {
     color: #00fff4; }
+  .videprinter li .scoring-team {
+    color: #feff00; }
   .videprinter li strong {
     color: #feff00;
     font-weight: normal; }
