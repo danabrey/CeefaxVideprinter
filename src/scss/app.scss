@@ -34,8 +34,12 @@ main {
 .videprinter {
 	li {
 		list-style-type: none;
+		margin-bottom: 10px;
 		.team {
 			color: $cyan;
+		}
+		.scoring-team {
+			color: $yellow;
 		}
 		strong {
 			color: $yellow;

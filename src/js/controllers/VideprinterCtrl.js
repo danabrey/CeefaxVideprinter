@@ -1,17 +1,20 @@
 CeefaxVideprinter.controller('VideprinterCtrl', ['$scope', '$http', '$interval', "PageData", function($scope, $http, $interval, PageData) {
     var limit = 15;
     var refresh = function() {
-        var url = "//polling.bbc.co.uk/sport/shared/football/videprinter.json?callback=JSON_CALLBACK";
-        $http.jsonp(url)
+        var url = "https://sportinglife.com/api/football/vidiprinter";
+        $http.get(url)
             .success(function(data){
-                var totalEvents = data.data.payload.events.length;
+                var totalEvents = data.lines.length;
                 if (totalEvents > 0) {
                     $scope.videprinterEvents = [];
-                    angular.forEach(data.data.payload.events.reverse().slice(0,limit-1), function(val, key) {
-                        if (val.label == 'FULL-TIME') val.label = 'FT';
-                        if (val.label == 'HALF-TIME') val.label = 'HT';
-                        if (val.label == 'GOAL!') val.label = 'GOAL';
-                        if (val.label == 'RED CARD!') val.label = 'RED';
+                    angular.forEach(data.lines, function(val) {
+                        if (val.event_type.event_type == 'FULL_TIME') val.event_type.event_type = 'FT';
+                        if (val.event_type.event_type == 'END_OF_FIRST_HALF') val.event_type.event_type = 'HT';
+                        if (val.event_type.event_type == 'OWN_GOAL') val.event_type.event_type = 'OG';
+                        if (val.event_type.event_type == 'PENALTY') {
+                            val.event_type.event_type = 'GOAL';
+                            val.comment = "PEN"
+                        }
                         $scope.videprinterEvents.push(val);
                     });
                 }

@@ -19,17 +19,17 @@
   "bugs": "https://github.com/danabrey/CeefaxVideprinter/issues",
   "license": "MIT",
   "devDependencies": {
-    "angular": "^1.4.8",
-    "angular-ui-router": "^0.2.15",
-    "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-copy": "^0.8.2",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-gh-pages": "^1.0.0",
-    "grunt-sass": "^1.1.0",
-    "live-reload": "^1.1.0",
-    "load-grunt-tasks": "^3.3.0",
-    "node-sass": "^3.4.2"
+    "angular": "1.4.8",
+    "angular-ui-router": "0.2.15",
+    "grunt": "0.4.5",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-copy": "0.8.2",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-gh-pages": "1.0.0",
+    "grunt-sass": "1.1.0",
+    "live-reload": "1.1.0",
+    "load-grunt-tasks": "3.3.0",
+    "node-sass": "3.4.2"
   },
   "dependencies": {}
 }

@@ -4,8 +4,9 @@
 </p>
 <ul class="videprinter" ng-show="videprinterEvents.length > 0">
   <li ng-repeat="item in videprinterEvents">
-      <span ng-bind-html="item.competitionCode | trust"></span>: <span ng-bind-html="item.label | trust"></span> <span class="team" ng-bind-html="item.homeText | trust"></span> <span ng-bind-html="item.scoreText | trust"></span> <span class="team" ng-bind-html="item.awayText | trust"></span>
-      <br><strong><span ng-bind-html="item.comment | trust"></span></strong>
+      <span ng-bind-html="item.event_type.event_type | trust"></span>: <span class="team" ng-class="item.team_score_a.team.name == item.team.name ? 'scoring-team' : ''" ng-bind-html="item.team_score_a.team.name | trust"></span> <span ng-bind-html="item.team_score_a.score[0].score | trust"></span>-<span ng-bind-html="item.team_score_b.score[0].score | trust"></span> <span class="team" ng-class="item.team_score_b.team.name == item.team.name ? 'scoring-team' : ''" ng-bind-html="item.team_score_b.team.name | trust"></span>
+      <br><strong><span ng-bind-html="item.player.surname | trust"></span> <span ng-if="item.event_type.event_type == 'GOAL'" ng-bind-html="item.match_time | trust"></span>
+  <span ng-if="item.comment">(<span ng-bind-html="item.comment | trust"></span>)</span> </strong>
   </li>
 </ul>
 <div class="standout-row blue"><a ui-sref="302">About this project</a> <a class="right" ui-sref="302">302</a></div>
