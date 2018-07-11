@@ -430,7 +430,7 @@ CeefaxVideprinter.filter('cut', function () {
     var limit = 15;
     var refresh = function() {
         var url = "https://sportinglife.com/api/football/vidiprinter";
-        $http.json(url)
+        $http.jsonp(url)
             .success(function(data){
                 console.log(data);
                 // var totalEvents = data.data.payload.events.length;
