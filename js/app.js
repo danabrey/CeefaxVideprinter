@@ -436,12 +436,14 @@ CeefaxVideprinter.filter('cut', function () {
                 var totalEvents = data.lines.length;
                 if (totalEvents > 0) {
                     $scope.videprinterEvents = [];
-                    angular.forEach(data.data.payload.events.reverse().slice(0,limit-1), function(val, key) {
-                        if (val.label == 'FULL-TIME') val.label = 'FT';
-                        if (val.label == 'HALF-TIME') val.label = 'HT';
-                        if (val.label == 'GOAL!') val.label = 'GOAL';
-                        if (val.label == 'RED CARD!') val.label = 'RED';
-                        $scope.videprinterEvents.push(val);
+                    angular.forEach(data.lines, function(val, key) {
+                        console.log(val);
+                        console.log(key);
+                        // if (val.label == 'FULL-TIME') val.label = 'FT';
+                        // if (val.label == 'HALF-TIME') val.label = 'HT';
+                        // if (val.label == 'GOAL!') val.label = 'GOAL';
+                        // if (val.label == 'RED CARD!') val.label = 'RED';
+                        // $scope.videprinterEvents.push(val);
                     });
                 }
             });
