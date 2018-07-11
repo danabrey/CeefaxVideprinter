@@ -437,6 +437,10 @@ CeefaxVideprinter.filter('cut', function () {
                 if (totalEvents > 0) {
                     $scope.videprinterEvents = [];
                     angular.forEach(data.lines, function(val) {
+                        if (val.event_type.event_type == 'FULL_TIME') val.label = 'FT';
+                        if (val.label == 'END_OF_FIRST_HALF') val.label = 'HT';
+                        if (val.label == 'OWN_GOAL') val.label = 'OG';
+                        if (val.label == 'RED CARD!') val.label = 'RED';
                         $scope.videprinterEvents.push(val);
                     });
                 }
